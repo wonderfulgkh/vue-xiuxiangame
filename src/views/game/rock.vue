@@ -79,7 +79,7 @@
       player.value.props.money -= reward
     }
     emit('game-result', { success: won, reward })
-    const newNextGameTime = Date.now() + 10 * 60 * 1000
+    const newNextGameTime = Date.now() + 1
     player.value.nextGameTimes.rps = newNextGameTime
     emit('update-next-game-time', {
       game: 'rps',
