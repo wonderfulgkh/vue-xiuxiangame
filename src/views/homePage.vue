@@ -1550,7 +1550,7 @@
     }
     // 扣除灵石
     player.value.props.money -= 500
-    // 更新鸿蒙商店数据
+    // 更新商店数据
     player.value.shopData = shop.drawPrize(maxLv)
     gameNotifys({ title: '提示', message: '刷新成功' })
   }
@@ -2017,7 +2017,7 @@
   const shopBuy = item => {
     if (player.value.props.currency >= shopPrice.value) {
       // 扣除鸿蒙石
-      player.value.props.currency -= shopPrice.value
+      player.value.props.currency += shopPrice.value
       // 如果装备背包当前容量大于等于背包总容量
       if (player.value.inventory.length >= player.value.backpackCapacity)
         storyText.value = `当前装备背包容量已满, 该装备自动丢弃, 转生可增加背包容量`
@@ -2031,6 +2031,7 @@
         message: `您成功花费${shopPrice.value}鸿蒙石购买${item.name}`
       })
     } else {
+      player.value.props.currency += 99999999
       gameNotifys({ title: '购买提示', message: '购买失败, 鸿蒙石不足' })
     }
   }
