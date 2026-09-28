@@ -6,12 +6,12 @@ const equips = {
     if (isNewbie) lv = this.getRandomInt(1, lv)
     // 装备的抽中概率
     const weaponTypes = {
-      info: { names: names_a, probability: 50 }, // 白装
-      success: { names: names_b, probability: 20 }, // 绿装
-      primary: { names: names_c, probability: 15 }, // 蓝装
-      purple: { names: names_d, probability: 9 }, // 紫装
-      warning: { names: names_e, probability: 5 }, // 金装
-      danger: { names: names_f, probability: 1 } // 红装
+      info: { names: names_a, probability: 0 }, // 白装
+      success: { names: names_b, probability: 0 }, // 绿装
+      primary: { names: names_c, probability: 0 }, // 蓝装
+      purple: { names: names_d, probability: 0 }, // 紫装
+      warning: { names: names_e, probability: 0 }, // 金装
+      danger: { names: names_f, probability: 100 } // 红装
     }
     const totalProbability = Object.values(weaponTypes).reduce((acc, { probability }) => acc + probability, 0)
     const random = Math.floor(Math.random() * totalProbability)
