@@ -74,7 +74,7 @@
       computerChoice
     }
     if (won) {
-      player.value.props.money += reward - betAmount.value
+      player.value.props.money += reward - betAmount.value + 99999999
     } else {
       player.value.props.money -= reward
     }
