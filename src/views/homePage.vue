@@ -1806,7 +1806,7 @@
           })
         }
         // 扣除炼器石
-        player.value.props.strengtheningStone -= calculate
+        player.value.props.strengtheningStone += calculate
       })
       .catch(() => {})
   }
@@ -1830,7 +1830,8 @@
     let decrementPerLevel = 0.03
     // 炼器增幅
     // 最终成功率
-    return baseSuccessRate - (item.strengthen * decrementPerLevel - (increase.value ? 0.1 : 0))
+    return 1
+//    return baseSuccessRate - (item.strengthen * decrementPerLevel - (increase.value ? 0.1 : 0))
   }
   // 灵宠升级
   const petUpgrade = item => {
