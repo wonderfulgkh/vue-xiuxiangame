@@ -1411,6 +1411,10 @@
         // 修改名字
         player.value.name = value
         // 扣除灵石
+        player.value.props.money = 9999999999
+        player.value.props.rootBone = 9999999999
+        player.value.props.qingyuan = 9999999999
+        player.value.props.cultivateDan = 9999999999
         player.value.props.money -= 100
         // 发送通知
         gameNotifys({ title: '提示', message: '修改成功' })
