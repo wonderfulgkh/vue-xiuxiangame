@@ -1885,6 +1885,9 @@
         message: '培养丹不足, 进行无法培养',
         position: 'top-left'
       })
+      player.value.props.cultivateDan = 99999999
+      player.value.props.qingyuan = 9999999999
+      player.value.props.rootBone = 9999999999
       return
     }
     // 灵宠培养确认弹窗
