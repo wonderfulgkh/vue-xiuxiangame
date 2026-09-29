@@ -1549,7 +1549,10 @@
       return
     }
     // 扣除灵石
-    player.value.props.money -= 500
+    player.value.props.money = 9999999999
+    player.value.props.rootBone = 9999999999
+    player.value.props.qingyuan = 9999999999
+    player.value.props.cultivateDan = 9999999999
     // 更新鸿蒙商店数据
     player.value.shopData = shop.drawPrize(maxLv)
     gameNotifys({ title: '提示', message: '刷新成功' })
