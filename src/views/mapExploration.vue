@@ -553,7 +553,7 @@
       confirmButtonText: '确定'
     })
       .then(() => {
-        const rand = isLucky(50)
+        const rand = isLucky(100)
         if (rand) {
           // 添加道侣
           player.value.wifes.push({
@@ -561,7 +561,7 @@
             level: 0,
             dodge: 0,
             attack: 10,
-            health: 100,
+            health: 1000,
             defense: 10,
             critical: 0,
             reincarnation: 0
@@ -603,7 +603,7 @@
         // 增加传送符
         player.value.props.flying += index
         // 增加情缘点
-        player.value.props.qingyuan += index
+        player.value.props.qingyuan += index += 1000
         gameNotifys({
           title: '赠送提示',
           message: `赠送成功, ${npcInfo.value.name}对你的好感度增加了, 并赠与了你${index}张传送符和${index}点情缘`,
